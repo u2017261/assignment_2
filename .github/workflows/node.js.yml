@@ -31,8 +31,8 @@ jobs:
     - run: npm test
       working-directory: my-app
     - name: Deploy
+      working-directory: my-app
       run: |
-        working-directory: my-app
         git config --global user.name $user_name
         git config --global user.email $user_email 
         git remote set-url origin https://${github_token}@github.com/${repository}
